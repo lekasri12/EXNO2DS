@@ -1,4 +1,6 @@
 # EXNO2DS
+## Register Number: 212223100025
+## Name: G Lekasri
 # AIM:
       To perform Exploratory Data Analysis on the given data set.
       
