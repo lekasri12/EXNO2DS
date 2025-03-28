@@ -65,6 +65,7 @@ df.describe()
 df.shape
 ```
 ![Screenshot 2025-03-27 155758](https://github.com/user-attachments/assets/c83c8998-d8e8-4eed-a5aa-a7bf652ead10)
+## Categorical data analysis:
 ```
 df.nunique()
 ```
@@ -92,6 +93,7 @@ df.rename(columns={'Sex':'Gender'},inplace=True)
 df
 ```
 ![Screenshot 2025-03-27 155903](https://github.com/user-attachments/assets/95d54f90-21ee-44ab-8e82-d2da17337f35)
+## Bivariate analysis:
 ```
 sns.catplot(x="Gender",col="Survived",kind="count",data=df,height=5,aspect=.7)
 ```
@@ -112,6 +114,7 @@ sns.scatterplot(x=df["Age"],y=df["Fare"])
 sns.jointplot(x="Age",y="Fare",data=df)
 ```
 ![Screenshot 2025-03-27 160012](https://github.com/user-attachments/assets/b82cd5cb-29d0-4ad1-9918-fcac08fef3c9)
+## Multivariate analysis:
 ```
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -125,6 +128,7 @@ plt.show()
 sns.catplot(data=df,col="Survived",x="Gender",hue="Pclass",kind="count")
 ```
 ![Screenshot 2025-03-27 160056](https://github.com/user-attachments/assets/542b594e-e416-4896-a146-a1cf6d6829ba)
+## Co-Relation:
 ```
 numerical_features = df.select_dtypes(include=np.number).columns
 corr = df[numerical_features].corr()
